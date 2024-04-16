@@ -38,3 +38,41 @@ class CuentaBancaria():
 
     def datos_movimientos(self):
         return list(self.movimientos)  
+
+
+
+class User:
+
+    def __init__(self, nombre, contrasena, apellido, dni):
+        self.nombre = nombre
+        self.contrasena = contrasena
+        self.apellido = apellido
+        self.dni = dni
+
+    @staticmethod
+    def registrar_usuario():
+        nombre = input("Ingrese un nombre de usuario: ")
+        contrasena = input("Ingrese una contraseña: ")
+        apellido = input("Ingrese su apellido: ")
+        dni = input("Ingrese DNI: ")
+        nuevo_usuario = User(nombre, contrasena, apellido, dni)
+        print("Usuario registrado correctamente.")
+        return nuevo_usuario
+
+    def iniciar_sesion(self,nombre,contrasena):
+        if self.nombre == nombre and self.contrasena == contrasena:
+            self.conectado = True
+            print("Inicio de sesión exitoso.")
+        else:
+            print("Nombre de usuario o contraseña incorrectos.")
+
+    def cerrar_sesion(self):
+        self.conectado = False
+        print("Sesión cerrada.")
+
+    def esta_conectado(self):
+        return self.conectado
+    
+
+User1 = User.registrar_usuario()
+
