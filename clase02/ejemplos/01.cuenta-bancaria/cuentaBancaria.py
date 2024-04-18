@@ -1,3 +1,6 @@
+import cuentaBancaria_bd
+
+
 class CuentaBancaria():
     ''' Clase que nos permite la gestión de una Cuenta Bancaria genérica!
     '''
@@ -74,5 +77,4 @@ class User:
         return self.conectado
     
 
-User1 = User.registrar_usuario()
 

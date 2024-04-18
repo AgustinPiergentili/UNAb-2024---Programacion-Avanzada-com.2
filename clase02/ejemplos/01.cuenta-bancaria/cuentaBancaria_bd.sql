@@ -1,0 +1,9 @@
+USE CuentaBancaria;
+
+CREATE TABLE UsuariosRegistrados (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre VARCHAR(100) NOT NULL,
+    Apellido VARCHAR(100) NOT NULL,
+    DNI VARCHAR(20) UNIQUE NOT NULL,
+    Contraseña VARCHAR(255) NOT NULL
+);
